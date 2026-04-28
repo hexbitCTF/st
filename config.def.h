@@ -7,9 +7,8 @@
  */
 static char *font = "DejaVu Sans Mono:pixelsize=14:antialias=true:autohint=true";
 static char *font2[] = {
-    "Font Awesome 6 Free:pixelsize=12"
-    "FiraCode Nerd Font:size=14";
-
+    "Font Awesome 6 Free:pixelsize=12",
+    "FiraCode Nerd Font:size=14"
 };
 static int borderpx = 8;
 
@@ -159,7 +158,7 @@ static unsigned int cursorshape = 2;
  */
 
 static unsigned int cols = 80;
-static unsigned int rows = 45;
+static unsigned int rows = 20;
 
 /*
  * Default colour and shape of the mouse cursor
