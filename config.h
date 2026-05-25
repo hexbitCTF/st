@@ -103,40 +103,44 @@ float alpha = 0.8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-    /* 8 normal colors */
-    [0] = "#15161e", /* black */
-    [1] = "#f7768e", /* red */
-    [2] = "#9ece6a", /* green */
-    [3] = "#e0af68", /* yellow */
-    [4] = "#7aa2f7", /* blue */
-    [5] = "#bb9af7", /* magenta */
-    [6] = "#7dcfff", /* cyan */
-    [7] = "#a9b1d6", /* white */
+	/* 8 normal colors */
+	"#214969", /* 0: black   */
+	"#E52E2E", /* 1: red     */
+	"#44FFB1", /* 2: green   */
+	"#FFE073", /* 3: yellow  */
+	"#0FC5ED", /* 4: blue    */
+	"#a277ff", /* 5: magenta */
+	"#24EAF7", /* 6: cyan    */
+	"#24EAF7", /* 7: white   */
 
-    /* 8 bright colors */
-    [8]  = "#414868", /* black (bright) */
-    [9]  = "#f7768e", /* red (bright) */
-    [10] = "#9ece6a", /* green (bright) */
-    [11] = "#e0af68", /* yellow (bright) */
-    [12] = "#7aa2f7", /* blue (bright) */
-    [13] = "#bb9af7", /* magenta (bright) */
-    [14] = "#7dcfff", /* cyan (bright) */
-    [15] = "#c0caf5", /* white (bright) */
+	/* 8 bright colors */
+	"#214969", /* 8:  brblack   */
+	"#E52E2E", /* 9:  brred     */
+	"#44FFB1", /* 10: brgreen   */
+	"#FFE073", /* 11: bryellow  */
+	"#A277FF", /* 12: brblue    */
+	"#a277ff", /* 13: brmagenta */
+	"#24EAF7", /* 14: brcyan    */
+	"#24EAF7", /* 15: brwhite   */
 
-    /* special colors */
-    [256] = "#24283b", /* background (Storm) */
-    [257] = "#c0caf5", /* foreground */
-    [258] = "#3b4261", /* selection background */
+	[255] = 0,
+
+	/* more colors can be added after 255 to use with DefaultXX */
+	"#011423", /* 256: background */
+	"#CBE0F0", /* 257: foreground */
+	"#47FF9C", /* 258: cursor     */
+	"#011423", /* 259: cursor text*/
 };
+
 
 /*
  * Default colors (colorname index)
- * foreground, background, cursor
+ * foreground, background, cursor, reverse cursor
  */
 unsigned int defaultfg = 257;
 unsigned int defaultbg = 256;
-unsigned int defaultcs = 257;
-static unsigned int defaultrcs = 256;
+unsigned int defaultcs = 258;
+static unsigned int defaultrcs = 259;
 
 
 /*
